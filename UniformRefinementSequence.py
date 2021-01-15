@@ -1,6 +1,9 @@
 import numpy as np
-from LoadableMesh import *
-from Mesh1D import *
+from LoadableMesh1D import *
+from LoadableMesh2D import *
+from UniformLineRefinement import *
+from UniformTriangularRefinement import *
+
 import scipy.sparse as sp
 
 class UniformRefinementSequence:
@@ -66,7 +69,7 @@ if __name__=='__main__':
   from math import pi, sin
   import numpy.linalg as la
 
-  reader = TriangleMeshReader('../Geometry/oneHole.1')
+  reader = TriangleMeshReader('TestMeshes/oneHole.1')
   mesh = reader.getMesh()
 
   numLevels = 4

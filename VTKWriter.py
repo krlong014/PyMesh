@@ -1,6 +1,6 @@
 
-from LoadableMesh import *
-from .. Utils.XMLHeader import *
+from LoadableMesh2D import *
+from XMLHeader import *
 
 class VTKWriter:
 

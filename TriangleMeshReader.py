@@ -1,4 +1,4 @@
-from LoadableMesh import *
+from LoadableMesh2D import *
 
 # --------------------------------------------------------------------------
 # Reader for constructing a mesh from data stored in the file formats

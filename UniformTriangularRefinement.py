@@ -1,5 +1,5 @@
 import numpy as np
-from LoadableMesh import *
+from LoadableMesh2D import *
 import scipy.sparse as sp
 
 def UniformTriangularRefinement(coarse, verb=0):

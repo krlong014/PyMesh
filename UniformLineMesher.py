@@ -1,4 +1,4 @@
-from Mesh1D import *
+from LoadableMesh1D import *
 
 def UniformLineMesh(a, b, nx):
 

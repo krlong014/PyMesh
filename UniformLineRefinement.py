@@ -1,5 +1,5 @@
 import numpy as np
-from Mesh1D import *
+from LoadableMesh1D import *
 import scipy.sparse as sp
 
 def UniformLineRefinement(coarse, verb=0):
