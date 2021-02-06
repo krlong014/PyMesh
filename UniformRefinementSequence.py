@@ -46,7 +46,7 @@ class UniformRefinementSequence:
     seqA = [None]*L
     seqA[L-1]=fineA
     for i in reversed(range(L-1)):
-      eqA[i]=self.downdates[i]*self.seqA[i+1]*self.updates[i]
+      seqA[i]=self.downdates[i]*(seqA[i+1]*self.updates[i])
     return seqA
 
   def makeVectorSequence(self, fine_b):

@@ -40,12 +40,12 @@ def UniformLineRefinement(coarse, verb=0):
       updateVals.append([0.5, 0.5])
       updateVals.append([1.0])
 
-    print('--- refined mesh --- ')
-    fine.dump()
+    #print('--- refined mesh --- ')
+    #fine.dump()
 
-    print('--- update information ---')
-    for i,(ind,val) in enumerate(zip(updateIndices, updateVals)):
-      print('%6d %20s %20s' % (i, ind, val))
+    #print('--- update information ---')
+    #for i,(ind,val) in enumerate(zip(updateIndices, updateVals)):
+    #  print('%6d %20s %20s' % (i, ind, val))
 
     # -- Refinement is done. Create the prolongation and restriction operators.
     # The update operator uses interpolation. The downdate operator is the

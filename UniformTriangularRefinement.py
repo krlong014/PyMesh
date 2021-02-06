@@ -181,6 +181,7 @@ def UniformTriangularRefinement(coarse, verb=0):
 if __name__=='__main__':
 
   from TriangleMeshReader import *
+  from MPLMeshViewer import *
 
   print('--- coarse --- ')
   coarse = TwoElemSquare()
@@ -196,3 +197,9 @@ if __name__=='__main__':
 
   print('--- downdate operator ---')
   print(down.todense())
+
+
+
+
+  viewer = MPLMeshViewer(vertRad=0.05, fontSize=14)
+  viewer.show(fine)
