@@ -1,8 +1,8 @@
-from LoadableMesh1D import *
+from LoadableMesh1D import LoadableMesh1D
 
 def UniformLineMesh(a, b, nx):
 
-  mesh = Mesh1D()
+  mesh = LoadableMesh1D()
 
   h = (b-a)/float(nx)
   for i in range(nx+1):

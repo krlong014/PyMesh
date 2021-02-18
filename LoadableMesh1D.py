@@ -5,13 +5,13 @@
 # For Math 5345
 # --------------------------------------------------------------------------
 
-class Mesh1D:
+class LoadableMesh1D:
 
   # Initialize an empty mesh
   def __init__(self):
     # Mesh is 1D
     self.dim = 1
-    
+
     # mesh points
     self.verts = []
 
@@ -94,7 +94,7 @@ class Mesh1D:
 def FourElemLine():
   from math import sqrt
 
-  mesh = Mesh1D()
+  mesh = LoadableMesh1D()
 
   mesh.addVertex(0.0, 1)
   mesh.addVertex(0.25, 0)

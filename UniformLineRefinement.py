@@ -1,11 +1,11 @@
 import numpy as np
-from LoadableMesh1D import *
+from LoadableMesh1D import LoadableMesh1D
 import scipy.sparse as sp
 
 def UniformLineRefinement(coarse, verb=0):
 
     coarse = coarse
-    fine = Mesh1D()
+    fine = LoadableMesh1D()
 
     numVerts = len(coarse.verts)
     numElems = len(coarse.elems)

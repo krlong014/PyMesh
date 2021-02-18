@@ -10,7 +10,7 @@
 # Katharine Long, Sep 2020
 # For Math 5344
 # --------------------------------------------------------------------------
-class LoadableMesh:
+class LoadableMesh2D:
 
   # Initialize an empty mesh.
   def __init__(self):
@@ -166,7 +166,6 @@ class LoadableMesh:
         return label
     return 0
 
-
   # Dump the internal data
   def dump(self):
 
@@ -223,7 +222,7 @@ class LoadableMesh:
 def TwoElemSquare():
 
   # Create an empty mesh
-  mesh = LoadableMesh()
+  mesh = LoadableMesh2D()
 
   # Add the four vertices, giving (x,y) pairs
   mesh.addVertex((0,0))
