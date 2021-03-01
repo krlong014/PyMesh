@@ -19,11 +19,16 @@ class MPLMeshViewer:
         self.vertRad = vertRad
         self.colors = colors
 
-    def show(self, mesh):
+    def show(self, mesh, marked=[], markedColor='skyblue',
+      unmarkedColor='lightgray'):
         ax = plt.axes()
 
         for i,v in enumerate(mesh.verts):
-            self.addVert(ax, i, v)
+            if i in marked:
+              vertColor = markedColor
+            else:
+              vertColor = unmarkedColor
+            self.addVert(ax, i, v, vertColor=vertColor)
 
         for i,e in enumerate(mesh.elems):
             self.addElem(ax, mesh, i, e)
@@ -34,8 +39,8 @@ class MPLMeshViewer:
         plt.show()
 
 
-    def addVert(self, ax, index, xy):
-        circle = plt.Circle(xy, radius=self.vertRad, fc='lightgray', ec='black')
+    def addVert(self, ax, index, xy, vertColor='lightgray'):
+        circle = plt.Circle(xy, radius=self.vertRad, fc=vertColor, ec='black')
         ax.add_patch(circle)
         ax.annotate(index.__str__(), xy, ha='center',
             va='center', fontsize=self.fontSize)
@@ -74,4 +79,4 @@ if __name__=='__main__':
     mesh = TwoElemSquare()
 
     viewer = MPLMeshViewer(vertRad=0.05, fontSize=14)
-    viewer.show(mesh)
+    viewer.show(mesh, marked=[1])
