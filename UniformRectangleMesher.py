@@ -59,7 +59,6 @@ def UniformRectangleMesher(ax, bx, nx, ay, by, ny):
     mesh.addSide(s[0], s[1], 0)
 
   for e in elems:
-    print('adding ', e[0], ' ', e[1], ' ', e[2])
     mesh.addElem(e[0], e[1], e[2])
 
 
