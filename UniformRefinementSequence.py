@@ -21,6 +21,7 @@ class UniformRefinementSequence:
     self.meshes.append(coarse)
     self.updates = []
     self.downdates = []
+    self.seqA = []
 
     for i in range(1,numLevels):
       fine, up, down = refiner(self.meshes[i-1], verb)
@@ -43,11 +44,11 @@ class UniformRefinementSequence:
 
   def makeMatrixSequence(self, fineA):
     L = len(self.meshes)
-    seqA = [None]*L
-    seqA[L-1]=fineA
+    self.seqA = [None]*L
+    self.seqA[L-1]=fineA
     for i in reversed(range(L-1)):
-      seqA[i]=self.downdates[i]*(seqA[i+1]*self.updates[i])
-    return seqA
+      self.seqA[i]=self.downdates[i]*(self.seqA[i+1]*self.updates[i])
+    
 
   def makeVectorSequence(self, fine_b):
     L = len(self.meshes)
