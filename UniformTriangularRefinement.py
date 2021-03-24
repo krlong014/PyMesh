@@ -5,7 +5,7 @@ import scipy.sparse as sp
 def UniformTriangularRefinement(coarse, verb=0):
 
     coarse = coarse
-    fine = LoadableMesh()
+    fine = LoadableMesh2D()
 
     numVerts = len(coarse.verts)
     numEdges = len(coarse.sides)
