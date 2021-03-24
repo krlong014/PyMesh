@@ -30,7 +30,7 @@ class TriangleMeshReader:
 
     # Call this function to read the mesh and return it to the user
     def getMesh(self):
-        mesh = LoadableMesh()
+        mesh = LoadableMesh2D()
         self.readVerts(mesh)
         self.readSides(mesh)
         self.readElems(mesh)
